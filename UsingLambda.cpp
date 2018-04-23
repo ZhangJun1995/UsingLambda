@@ -1,5 +1,5 @@
 /*****************************
-*Name:  Lambda±í´ïÊ½Ó¦ÓÃ
+*Name:  Lambdaè¡¨è¾¾å¼åº”ç”¨
 *Author: Zhang Jun
 *Date: 2018/04/23
 *****************************/
@@ -10,14 +10,14 @@
 #include <numeric>
 #include <algorithm>
 using namespace std;
-//Çó´óÓÚµÈÓÚ¸ø¶¨³¤¶ÈµÄµ¥´ÊÓĞ¶àÉÙ£¬²¢Êä³ö 
+//æ±‚å¤§äºç­‰äºç»™å®šé•¿åº¦çš„å•è¯æœ‰å¤šå°‘ï¼Œå¹¶è¾“å‡º 
 void biggies(vector<string> vi, string::size_type sz) {
 	stable_sort(vi.begin(), 
-				vi.end(), 
-				[](const string &s1, const string &s2) { return s1.size() < s2.size(); });
+		    vi.end(), 
+		    [](const string &s1, const string &s2) { return s1.size() < s2.size(); });
 	auto fw = find_if(vi.begin(), 
-					  vi.end(), 
-					  [sz](const string &cs) {return cs.size() >= sz; });
+			  vi.end(), 
+			  [sz](const string &cs) {return cs.size() >= sz; });
 	for (auto c = fw; c != vi.end(); ++c) {
 		cout << *c << " ";
 	}
